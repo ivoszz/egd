@@ -1,0 +1,22 @@
+{
+  "name": "egd",
+  "description": "EGD (European Go Database) Proxy",
+  "author": "ivoszz <ivoszz@gmail.com>",
+  "subdomain": "egd",
+  "scripts": {
+    "start": "server.js"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.6.x"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "request": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "repository": {
+    "url": ""
+  }
+}
