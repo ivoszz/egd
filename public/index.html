@@ -1,39 +1,29 @@
 <!DOCTYPE html>
-<html ng-app>
+<html lang="en" ng-app="egd">
 <head>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
   <title>EGD Proxy Demo App</title>
 </head>
 <body>
-  <header class="header">
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="#">EGD Proxy Demo App</a>
-        </div>
-      </div>
-    </div>
-  </header>
 
-  <div class="container">
+  <div class="content" ng-view></div>
 
-    <div ng-init="message='Alert message!'">
-      <p class="alert">{{message}}</p>
-    </div>
+  <footer class="footer">
 
-    <div>
-      <h1>EGD Proxy Demo App</h1>
-      
-    </div>
-    
-    <footer class="footer">
+    <div class="container">
       <p>ivoszz, (c) 2012</p>
       <p>Code licensed under The MIT License.</p>
-    </footer>
+      <p>EGD Proxy app v<span app-version></span></p>
+    </div>
+  </footer>
 
-  </div>
-
+  <script src="js/egd.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
 </body>
 </html>
