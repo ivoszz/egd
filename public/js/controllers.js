@@ -2,16 +2,23 @@
 
 /* Controllers */
 
-MenuCtrl.$inject = [];
+function DataCtrl($scope, $http) {
+  $scope.message = '';
+  $scope.orderProp = '-Gor';
 
-function DataCtrl($scope) {
-  $scope.message = 'Really serious bug. Attention!';
+  $http.get('/EGD/GetPlayerDataByData.php?lastname=&country=cz&club=Brno')
+    .success(function(data) {
+      (data.players).forEach(function(record) {
+        record.Gor = parseInt(record.Gor, 10);
+      });
+      $scope.players = data.players;
+    });
 };
 
-DataCtrl.$inject = [];
+DataCtrl.$inject = ['$scope', '$http'];
 
 function StatusCtrl($scope) {
-  $scope.message = '';
+  $scope.message = 'Attention! Feature still not implemented. Sorry. :(';
 };
 
-StatusCtrl.$inject = [];
+StatusCtrl.$inject = ['$scope'];
